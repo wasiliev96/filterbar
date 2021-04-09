@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    >
+    <title >Filter bar</title >
+    <link rel="stylesheet"
+          href="lib/normalize.css"
+    >
+    <link rel="stylesheet"
+          href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
+    >
+    <link rel="stylesheet"
+          href="css/styles.css"
+    >
+</head >
+<body >
+<section class="container">
+    <div class="component">
+        <div class="place">
+            <div class="caption">Место или название отеля</div >
+            <!-- /.caption -->
+            <div class="place__text">
+                <div class="place__icon">
+                    <span class="icon mdi icon mdi-map-marker-outline"></span >
+                    <!-- /.icon mdi icon mdi-home -->
+                </div >
+                <!-- /.place__icon -->
+                <label >
+                    <input type="text"
+                           id="place"
+                           class="place__text text-secondary"
+                           placeholder="Введите здесь место"
+                    />
+                </label >
+                <!-- /.place__text -->
+            </div >
+            <!-- /.place__placeholder -->
+        </div >
+        <!-- /.place -->
+        <div class="divider divider_vertical"></div >
+        <!-- /.divider divider_vertical -->
+        <div class="dates">
+            <div class="dates__date enter">
+                <div class="caption">Заезд</div >
+
+                <div class="enter__text">
+                    <div class="dates__icon">
+                        <span class="icon mdi icon mdi-calendar-range"></span >
+                        <!-- /.icon mdi icon mdi-calendar-range -->
+                    </div >
+                    <!-- /.dates__icon -->
+                    <span id="enterDate">07 февраля</span >
+                </div >
+                <!-- /.enter__text -->
+            </div >
+            <div class="divider divider_dot"></div >
+            <!-- /.divider divider_dot -->
+            <!-- /.dates__date enter -->
+            <div class="dates__date leave">
+                <div class="caption">Выезд</div >
+                <div class="leave__text">
+                    <span id="leaveDate">22 февраля</span >
+                    <button id="litepicker"
+                            aria-label="Date picker"
+                    >
+                        <span class="icon mdi icon-secondary mdi-chevron-down"
+                              style="pointer-events: none"
+                        ></span >
+                        <!-- /.icon mdi icon md i-calendar-range -->
+                    </button >
+                </div >
+                <!-- /.leave__text -->
+            </div >
+            <!-- /.dates__date leave -->
+            <div class="dates__toggle-icon"></div >
+            <!-- /.dates__toggle-icon -->
+        </div >
+        <!-- /.dates -->
+        <div class="divider divider_vertical"></div >
+        <div class="config">
+            <div class="config__rooms">
+                <div class="caption">Номера</div >
+                <!-- /.caption -->
+                <div class="number-select">
+                    <label >
+                        <input id="rooms"
+                               value="0"
+                               class="number-select__value"
+                        />
+                    </label >
+                    <!-- /.number-select__value -->
+                    <div class="number-select__controls">
+                        <button id="incrementRooms"
+                                aria-label="plus room"
+                        >
+                            <span class="icon mdi mdi-triangle icon-select-up"></span >
+                        </button >
+                        <!-- /.number-select__up -->
+                        <button id="decrementRooms"
+                                aria-label="minus room"
+                        >
+                            <span class="icon mdi mdi-triangle icon-select-down"></span >
+                        </button >
+                        <!-- /.number-select__down -->
+                    </div >
+                    <!-- /.number-select__controls -->
+                </div >
+                <!-- /.number-select -->
+            </div >
+            <!-- /.config__rooms -->
+            <div class="config_adults">
+                <div class="caption">Взрослые</div >
+                <!-- /.caption -->
+                <div class="number-select">
+                    <label >
+                        <input id="adults"
+                               value="0"
+                               class="number-select__value"
+                        />
+                    </label >
+                    <!-- /.number-select__value -->
+                    <div class="number-select__controls">
+                        <button id="incrementAdults"
+                                aria-label="plus adult"
+                        >
+                            <span class="icon mdi mdi-triangle icon-select-up"></span >
+                        </button >
+                        <!-- /.number-select__up -->
+                        <button id="decrementAdults"
+                                aria-label="minus adult"
+                        >
+                            <span class="icon mdi mdi-triangle icon-select-down"></span >
+                        </button >
+                        <!-- /.number-select__down -->
+                    </div >
+                    <!-- /.number-select__controls -->
+                </div >
+                <!-- /.number-select -->
+            </div >
+            <!-- /.config config_adults -->
+
+            <div class="config__children">
+                <div class="caption">Дети</div >
+                <!-- /.caption -->
+                <div class="number-select">
+                    <label >
+                        <input id="children"
+                               value="0"
+                               class="number-select__value"
+                        />
+                    </label >
+                    <!-- /.number-select__value -->
+                    <div class="number-select__controls">
+                        <button id="incrementChildren"
+                                aria-label="plus child"
+                        >
+                            <span class="icon mdi mdi-triangle icon-select-up"></span >
+                        </button >
+                        <!-- /.number-select__up -->
+                        <button id="decrementChildren"
+                                aria-label="minus child"
+                        >
+                            <span class="icon mdi mdi-triangle icon-select-down"></span >
+                        </button >
+                        <!-- /.number-select__down -->
+                    </div >
+                    <!-- /.number-select__controls -->
+                </div >
+                <!-- /.number-select -->
+            </div >
+            <!-- /.config__children -->
+
+            <div class="config__add">
+                <button class="btn btn-plus"
+                        aria-label="add field"
+                >
+                    <span class="icon icon-invert mdi mdi-plus"></span >
+                </button >
+                <!-- /.config__add_btn -->
+            </div >
+            <!-- /.config__add -->
+        </div >
+        <!-- /.config -->
+
+        <div class="component_search">
+            <button class="btn search-btn">Найти</button >
+            <!-- /.btn.search-btn -->
+        </div >
+        <!-- /.component component_search -->
+    </div >
+</section >
+<!-- /.container -->
+<script src="./lib/litepicker/litepicker.js"></script >
+<script src="./lib/litepicker/mobilefriendly.js"></script >
+<script src="./lib/litepicker/keyboardnav.js"></script >
+<script >
+    const picker = new Litepicker({
+        element: document.getElementById('litepicker'),
+        plugins: ['mobilefriendly', 'keyboardnav'],
+        singleMode: false,
+        numberOfMonths: 2,
+        numberOfColumns: 2,
+        position: 'bottom right'
+    });
+</script >
+<script async
+        defer
+        src="./js/scripts.js"
+></script >
+
+</body >
+</html >

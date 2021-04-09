@@ -1,0 +1,244 @@
+@charset "UTF-8";
+:root {
+  --box-shadow-default: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  --box-shadow-focus: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  --color-accent: #fda142;
+  --color-text_base: #383838;
+  --color-text_lighten: #6e6e6e;
+  --color-text_lighten2: #ffffff;
+  --font-family-primary: Roboto, sans-serif;
+  --font-family-secondary: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  color: var(--color-text_base);
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-focus);
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.component {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 1.2rem 1.2rem 3rem;
+  box-shadow: var(--box-shadow-default);
+  max-width: 1100px;
+  width: 100%;
+}
+.component input[type=text] {
+  border: none;
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+}
+.component > div:not(.divider) {
+  flex-grow: 1;
+  font-weight: 600;
+  min-width: 160px;
+}
+.component button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.divider_vertical {
+  width: 1px;
+  height: 50%;
+  margin: auto 1rem;
+  background-color: var(--color-text_lighten);
+  opacity: 0.3;
+}
+.divider_dot {
+  position: relative;
+  margin: 0 2rem 0;
+}
+.divider_dot:before {
+  content: "·";
+  position: absolute;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  transform: translateY(-100%);
+}
+
+.place__text, .enter__text, .leave__text {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+.place__text span, .enter__text span, .leave__text span {
+  margin: 0 0.2em;
+}
+.place__text .icon, .enter__text .icon, .leave__text .icon {
+  font-size: 1.5rem;
+}
+
+.place {
+  min-width: 240px;
+}
+
+.caption {
+  color: var(--color-text_lighten);
+  font-size: 0.7rem;
+  padding: 0 0 0.5em 0.3em;
+  font-family: var(--font-family-secondary);
+  font-weight: 600;
+}
+
+.dates {
+  display: flex;
+  min-width: 330px;
+  position: relative;
+}
+.dates > div {
+  flex-grow: 1;
+}
+
+.config {
+  display: flex;
+  min-width: 300px;
+}
+.config > div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.config .config__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 1.2rem;
+}
+.config .config__add .btn-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-accent);
+  opacity: 0.5;
+  font-size: 1.2rem;
+  transition: opacity 0.1s ease-out;
+}
+.config .config__add .btn-plus:hover {
+  opacity: 1;
+}
+
+.number-select {
+  display: flex;
+}
+.number-select input {
+  text-align: center;
+}
+
+.number-select__controls {
+  display: flex;
+  font-size: 0.5rem;
+  height: 100%;
+  flex-direction: column;
+}
+.number-select__controls button:first-child {
+  padding-bottom: 4px;
+  padding-top: 2px;
+}
+.number-select__controls button:last-child {
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+.number-select__controls button span {
+  color: var(--color-text_base);
+}
+.number-select__controls button:focus {
+  outline: none;
+}
+.number-select__controls button:focus span {
+  color: var(--color-accent);
+}
+
+.component_search {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.component_search button.search-btn {
+  display: block;
+  background-color: var(--color-accent);
+  color: var(--color-text_lighten2);
+  padding: 1em 4em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Calibri, sans-serif;
+}
+
+.number-select__value {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+span.icon {
+  color: var(--color-accent);
+  display: flex;
+}
+
+span.icon-select-down::before {
+  transform: rotate(180deg);
+}
+
+span.icon-secondary {
+  color: var(--color-text_lighten);
+}
+
+span.icon-invert {
+  color: var(--color-text_lighten2);
+}
+
+.text-secondary {
+  color: var(--color-text_lighten);
+}
+
+@media screen and (max-width: 1100px) {
+  .component {
+    flex-direction: column;
+  }
+  .component__search {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+  .component > div {
+    margin: 1rem auto;
+  }
+
+  .config > div {
+    margin: 0 1rem;
+  }
+  .btn-plus {
+    margin: 1rem 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
